@@ -5,74 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Wars</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-    <h1 class="main-title">Os Planetas de Star Wars</h1>
+<body onload="listFilms()">
+    <h1 class="title-main">Os Planetas de Star Wars</h1>
     <hr>
     <br>
+
     <main>
-        <h2 class="secondary-title">Lista de Filmes</h2>
-        <p class="subtitle">Selecione um filme para conhecer seus planetas. </p>
-        <div class="movieListContainer">
-            <ul class="list">
-                <li class="listItem">
-                    <div class="listItem-mainText">name</div>
-                    <div class="listItem-details">
-                        <span>date</span>
-                        <span>director</span>
-                    </div>
-                </li>
-                <li class="listItem">
-                    <div class="listItem-mainText">name</div>
-                    <div class="listItem-details">
-                        <span>date</span>
-                        <span>director</span>
-                    </div>
-                </li>
-                <li class="listItem">
-                    <div class="listItem-mainText">name</div>
-                    <div class="listItem-details">
-                        <span>date</span>
-                        <span>director</span>
-                    </div>
-                </li>
-                <li class="listItem">
-                    <div class="listItem-mainText">name</div>
-                    <div class="listItem-details">
-                        <span>date</span>
-                        <span>director</span>
-                    </div>
-                </li>
-                <li class="listItem">
-                    <div class="listItem-mainText">name</div>
-                    <div class="listItem-details">
-                        <span>date</span>
-                        <span>director</span>
-                    </div>
-                </li>
-                <li class="listItem">
-                    <div class="listItem-mainText">name</div>
-                    <div class="listItem-details">
-                        <span>date</span>
-                        <span>director</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="planetsModalContainer">
-            <div class="modal modal-open">
-                <div class="modal-dropShadow"></div>
-                <div class="modal-content">
-                    <div class="modal-title">
-                        <h2>title</h2>
-                        <button>fechar</button>
-                    </div>
-                    <div class="modal-content-body">
-                        <ul class="list"></ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        <h2 class="title-secondary">Lista de Filmes</h2>
+
+        <p class="subtitle">Selecione um filme para conhecer seus planetas. 🪐</p>
+
+        <div id="movieListContainer"></div>
+
+        <div id="planetsModalContainer"></div>
+
     </main>
+    <script src="films.js"></script>
 </body>
 </html>

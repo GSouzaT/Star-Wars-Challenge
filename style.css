@@ -1,0 +1,183 @@
+html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+  
+:root {
+    --text-primary: black;
+    --text-secondary: #808080;
+    --detail-light: #ddd;
+    --hover-color: #f5f5f5;
+}
+  
+body {
+    background-color: white;
+    position: relative;
+}
+  
+body.modal-prevent-overflow {
+    overflow: hidden;
+}
+  
+main {
+    padding: 0 1vw;
+}
+@media only screen and (min-width: 768px) {
+    main {
+      padding: 0 5vw;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    main {
+      padding: 0 10vw;
+    }
+}
+@media only screen and (min-width: 2560px) {
+    main {
+      padding: 0 20vw;
+    }
+}
+  
+.modal {
+    position: fixed;
+    display: none;
+    border-radius: 5px;
+    height: 94vh;
+    width: 100%;
+    top: 2vh;
+    left: 1vw;
+    max-width: 98vw;
+}
+  
+@media only screen and (min-width: 768px) {
+    .modal {
+      max-width: 94vw;
+      left: 3vw;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .modal {
+      max-width: 80vw;
+      left: 10vw;
+      height: 80vh;
+      top: 10vh;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .modal {
+      max-width: 60vw;
+      left: 18vw;
+      top: 6vh;
+    }
+}
+@media only screen and (min-width: 2560px) {
+    .modal {
+      max-width: 50vw;
+      left: 25vw;
+    }
+}
+  
+.modal--open {
+    display: block;
+}
+  
+.modal--open .modal-dropShadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+.modal-content {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    border-radius: inherit;
+    overflow-y: auto;
+}
+  
+.modal-content-body {
+    padding: 0 16px;
+}
+  
+.modal-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+  
+.modal-title button {
+    background: none;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 8px 16px;
+}
+  
+.modal-title button:hover {
+    background-color: black;
+    color: white;
+    transition: all linear 0.1s;
+}
+  
+.title--primary {
+    text-align: center;
+}
+  
+.title--secondary {
+    margin: 0;
+    margin-bottom: 4px;
+}
+  
+.subtitle {
+    margin: 0;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    font-size: 20px;
+}
+  
+.list {
+    list-style-type: none;
+    border: 1.5px solid var(--detail-light);
+    border-radius: 4px;
+    padding-inline-start: 0;
+}
+  
+.listItem {
+    padding: 16px;
+}
+  
+.listItem-mainText {
+    font-size: 22px;
+    margin: 0;
+    margin-bottom: 8px;
+}
+  
+.listItem-mainText::first-letter {
+    opacity: 0.5;
+}
+  
+.listItem:hover .listItem-mainText::first-letter {
+    opacity: 1;
+}
+  
+.listItem-details {
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.listItem:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+  
+.listItem:not(:last-child) {
+    border-bottom: 1px solid var(--detail-light);
+}
